@@ -11,13 +11,15 @@ const WeatherFetch = ({ coords }) => {
     }
   }, [coords]);
 
+  const ApiKey = import.meta.env.VITE_WEATHER_API_KEY;
+
   const fetchWeather = async () => {
     setLoading(true);
     setError(null);
 
     try {
       const response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lng}&appid=0ce58321bff8a916b5510a1de9265a71&units=metric` // Added units=metric for Celsius
+        `https://api.openweathermap.org/data/2.5/weather?lat=${coords.lat}&lon=${coords.lng}&appid=${ApiKey}&units=metric`
       );
 
       if (!response.ok) {
