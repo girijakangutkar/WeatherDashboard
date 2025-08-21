@@ -8,7 +8,6 @@ A responsive React application that displays real-time weather data for user-sel
 - City search functionality with instant results
 - Interactive map integration with dynamic marker updates
 - Visualization of temperature, humidity, and conditions
-- Responsive design for desktop and mobile
 - Modular React components for scalability
 
 ## Tech Stack
